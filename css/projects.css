@@ -90,7 +90,7 @@ h5 {
   h1, h5 {
     font: 600 48px/73px 'TisaPro-Bold', serif; } }
 
-/*==============================DESKTOP===============================*/
+/*===========================LARGE TABLET=============================*/
 @media all and (min-device-width: 920px) and (min-width: 920px) {
   body {
     font: 300 16px/30px 'Roboto', sans-serif; }
@@ -364,6 +364,26 @@ NAVIGATION
   .navigation__social-link {
     margin: 0 32px 0 0; } }
 
+/*===========================LARGE TABLET=============================*/
+@media all and (min-device-width: 920px) and (min-width: 920px) {
+  /*=================================
+    REUSABLE
+    =================================*/
+  .wrapper {
+    width: calc(100% - 192px); }
+  /*=================================
+    MAIN STYLES
+    =================================*/
+  .header__content {
+    padding: 64px 0; }
+  .project {
+    width: calc((100% - 64px) / 2);
+    height: auto;
+    position: relative; }
+  .social-links {
+    width: calc(100% - 192px);
+    margin: 48px auto 0 auto; } }
+
 /*==============================DESKTOP===============================*/
 @media all and (min-device-width: 1025px) and (min-width: 1025px) {
   /*=================================
@@ -391,10 +411,6 @@ NAVIGATION
             transform: scale(1.1); }
   .header__content {
     padding: 64px; }
-  .project {
-    width: calc((100% - 64px) / 2);
-    height: auto;
-    position: relative; }
   .project:nth-child(2n+2) {
     padding: 64px 0 0 0; }
   .project:nth-child(2n+1) {
@@ -647,9 +663,22 @@ NAVIGATION
   .featured-projects {
     padding: 0 0 48px 0; } }
 
+/*===========================LARGE TABLET=============================*/
 @media all and (min-device-width: 920px) and (min-width: 920px) {
   .featured-projects__link {
-    line-height: 48px; } }
+    line-height: 48px; }
+  .gallery__image {
+    width: calc((100% - 64px) / 2); }
+  .project-details__heading {
+    margin: 0 0 32px 0; }
+  .project-information {
+    margin: 32px 0 0 0; }
+  .button {
+    margin: 48px 0 0 0; }
+  .featured-projects {
+    padding: 0 0 64px 0; }
+  .gallery {
+    padding: 96px 0; } }
 
 /*==============================DESKTOP===============================*/
 @media all and (min-device-width: 1025px) and (min-width: 1025px) {
@@ -657,16 +686,10 @@ NAVIGATION
     padding: 32px 64px 0 64px; }
   .header__content--shorter {
     padding-bottom: 0; }
-  .button {
-    margin: 48px 0 0 0; }
   .button--inset {
     margin: 48px 0 0 64px; }
   .button--less-margin {
     margin: 0; }
-  .gallery {
-    padding: 96px 0; }
-  .gallery__image {
-    width: calc((100% - 64px) / 2); }
   .gallery__wide-image {
     width: calc(100% - 300px);
     margin: 0 auto; }
@@ -674,12 +697,7 @@ NAVIGATION
     padding: 0 128px 32px 128px; }
   .project-details {
     padding: 0 64px; }
-  .project-details__heading {
-    margin: 0 0 32px 0; }
-  .project-information {
-    margin: 32px 0 0 0; }
   .featured-projects {
-    padding: 0 0 64px 0;
     width: calc(100% - 428px); }
   .featured-projects__link-icon {
     display: inline-block;

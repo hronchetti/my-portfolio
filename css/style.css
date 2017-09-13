@@ -90,7 +90,7 @@ h5 {
   h1, h5 {
     font: 600 48px/73px 'TisaPro-Bold', serif; } }
 
-/*==============================DESKTOP===============================*/
+/*===========================LARGE TABLET=============================*/
 @media all and (min-device-width: 920px) and (min-width: 920px) {
   body {
     font: 300 16px/30px 'Roboto', sans-serif; }
@@ -364,6 +364,26 @@ NAVIGATION
   .navigation__social-link {
     margin: 0 32px 0 0; } }
 
+/*===========================LARGE TABLET=============================*/
+@media all and (min-device-width: 920px) and (min-width: 920px) {
+  /*=================================
+    REUSABLE
+    =================================*/
+  .wrapper {
+    width: calc(100% - 192px); }
+  /*=================================
+    MAIN STYLES
+    =================================*/
+  .header__content {
+    padding: 64px 0; }
+  .project {
+    width: calc((100% - 64px) / 2);
+    height: auto;
+    position: relative; }
+  .social-links {
+    width: calc(100% - 192px);
+    margin: 48px auto 0 auto; } }
+
 /*==============================DESKTOP===============================*/
 @media all and (min-device-width: 1025px) and (min-width: 1025px) {
   /*=================================
@@ -391,10 +411,6 @@ NAVIGATION
             transform: scale(1.1); }
   .header__content {
     padding: 64px; }
-  .project {
-    width: calc((100% - 64px) / 2);
-    height: auto;
-    position: relative; }
   .project:nth-child(2n+2) {
     padding: 64px 0 0 0; }
   .project:nth-child(2n+1) {
