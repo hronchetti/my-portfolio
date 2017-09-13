@@ -2,53 +2,58 @@
 NAVIGATION MENU CONTROL
 =================================*/
 var menu = document.getElementsByClassName('menu')[0];
+var menuGrow = document.getElementsByClassName('menu--grow')[0];
 var menuIcon = document.getElementsByClassName('menu__icon')[0];
 var navigation = document.getElementsByClassName('navigation')[0];
+var body = document.getElementsByClassName('body')[0];
 
 $(menu).click(function(){
-    $(navigation).toggleClass('hidden');
+    // Changing menu button colour and icon
     $(menu).toggleClass('menu--active');
     $(menuIcon).toggleClass('menu__icon--active icon-menu icon-close');
-    $('body').toggleClass('stop-scrolling')
+    $(menuGrow).toggleClass('hidden');
+    $(body).toggleClass('stop-scrolling');
+    // Toggling navigation visibility & disable scroll when open
+    if($(navigation).hasClass('hidden')){
+        // Waiting until menuGrow animation has finished
+        setTimeout(function(){
+            $(navigation).removeClass('hidden');
+        }, 250);
+    } else{
+        $(navigation).addClass('hidden');
+    }
 });
 /*=================================
-APPLYING MULTIPLE FUNCTIONS ON READY
+ON DOCUMENT READY
 =================================*/
 $(document).ready(function(){
-    // Loading spinner fadeout
-    setTimeout(showPage, 500)
-    // Build page animations
-    setTimeout(buildPage, 500)
+    // Fadeout loading spinner and overlay
+    setTimeout(showPage, 500);
+    // Build page animation effect
+    setTimeout(function(){
+        $('.animate-bottom').css('display','block');
+    }, 500);
 });
 /*=================================
 LOADING SPINNER
 =================================*/
 var overlay = document.getElementsByClassName('overlay')[0];
 var loadingSpinner = document.getElementsByClassName('loader')[0];
-var pageLoaded = false;
-// Function to fadeout overlay and loading spinner
+// Fadeout overlay and loading spinner
 function showPage() {
-    loadingSpinner.style.display = 'none';
-    
+
+    $(loadingSpinner).css('display','none');
     $(overlay).css('animation','fadeOut 1s forwards');
-    
+    // Remove overlay from DOM after faded out
     setTimeout(function(){
-        overlay.style.display = 'none';
+        $(overlay).css('display','none');
     }, 1000);
-}
-/*=================================
-BUILD PAGE ANIMATIONS
-=================================*/
-function buildPage(){
-    $('.animate-bottom').each(function(i){
-        $('.animate-bottom').eq(i).css('display','block');
-    })
 }
 /*=================================
 MOBILE IMAGE SUPPORT
 =================================*/
 var imgs = document.getElementsByTagName('img');
-// If mobile screen
+// If mobile screen -> Show mobile images
 if (window.matchMedia('(max-width: 600px)').matches) {
     for (var i = 0; i < imgs.length; i++) {
 

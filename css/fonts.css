@@ -2,14 +2,12 @@
   font-family: 'TisaPro-Medium';
   src: url("../fonts/TisaPro-Medium.woff2") format("woff2"), url("../fonts/TisaPro-Medium.woff") format("woff");
   font-style: normal;
-  font-display: swap;
   font-weight: 500; }
 
 @font-face {
   font-family: 'TisaPro-Bold';
   src: url("../fonts/TisaPro-Bold.woff2") format("woff2"), url("../fonts/TisaPro-Bold.woff") format("woff");
   font-style: normal;
-  font-display: swap;
   font-weight: 600; }
 
 body {
