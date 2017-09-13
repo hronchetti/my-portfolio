@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'TisaPro-Medium';
+  src: url("../fonts/TisaPro-Medium.woff2") format("woff2"), url("../fonts/TisaPro-Medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'TisaPro-Bold';
+  src: url("../fonts/TisaPro-Bold.woff2") format("woff2"), url("../fonts/TisaPro-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600; }
+
+body {
+  font: 300 14px/28px 'Roboto', sans-serif;
+  color: #333;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h5 {
+  font: 600 32px/48px 'TisaPro-Bold', serif;
+  letter-spacing: 0; }
+
+h1 {
+  color: #333; }
+
+h2 {
+  font: 500 20px/34px 'TisaPro-Medium', serif;
+  color: #333;
+  margin: 0 0 16px 0; }
+
+h3 {
+  font: 300 17.5px/30px 'Roboto', sans-serif;
+  color: #333; }
+
+h4 {
+  font: 500 17.5px/32.5px 'TisaPro-Medium', serif;
+  color: #333; }
+
+h5 {
+  color: #fff; }
+
+.small-text {
+  font: 300 12.25px/16px 'Roboto', sans-serif;
+  color: #999; }
+
+.bold {
+  font-weight: 500; }
+
+/*==============================TABLET===============================*/
+@media all and (min-device-width: 600px) and (min-width: 600px) {
+  h1, h5 {
+    font: 600 48px/73px 'TisaPro-Bold', serif; } }
+
+/*==============================DESKTOP===============================*/
+@media all and (min-device-width: 920px) and (min-width: 920px) {
+  body {
+    font: 300 16px/30px 'Roboto', sans-serif; }
+  h1, h5 {
+    font: 600 64px/97px 'TisaPro-Bold', serif; }
+  h2 {
+    font: 500 32px/48px 'TisaPro-Medium', serif; }
+  h3 {
+    font: 300 20px/34px 'Roboto', sans-serif; }
+  h4 {
+    font: 500 20px/34px 'TisaPro-Medium', serif; }
+  .small-text {
+    font: 300 14px/24px 'Roboto', sans-serif; } }

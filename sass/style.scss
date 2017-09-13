@@ -1,0 +1,342 @@
+/*=================================
+INTRODUCTION
+===================================
+Description: This monolithic stylesheet contains all CSS written for Harry Ronchetti's Portfolio
+Author: Harry Ronchetti
+Initial styling: PHONE
+Version: 1.0
+Default naming convention: BEM
+*/
+
+@import 'reset';
+@import 'fonts';
+@import 'icons';
+
+//SIZING SYSTEM
+$unit-16: 16px;
+$unit-32: 32px;
+$unit-48: 48px;
+$unit-64: 64px;
+$unit-96: 96px;
+
+//COLOURS
+$white: #fff;
+$dark-gray: #333;
+$red: #E3474B;
+
+/*=================================
+GLOBAL
+=================================*/
+body{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    user-select: none;
+}
+::selection{
+    color: $dark-gray;
+    background: #FFE900;
+}
+/*=================================
+REUSABLE
+=================================*/
+.wrapper{
+    width: calc(100% - 64px);
+    margin: 0 auto;
+}
+.red{
+    color: $red;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+/*=================================
+MAIN STYLES
+=================================*/
+.header__content{
+    padding: $unit-32 0;
+}
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.project{
+    width: 100%;
+    padding: 0 0 $unit-48 0;
+}
+.project__title{
+    margin: 24px 0 14px 0;
+}
+.project__tagline{
+    line-height: 24px;
+    margin: 0 0 14px 0;
+    color: $dark-gray;
+}
+.social-links{
+    width: calc(100% - 64px);
+    margin: 0 auto;
+    z-index: 999;
+}
+.social-links__icon{
+    margin: 0 32px 0 0;
+}
+/*=================================
+FOOTER
+=================================*/
+.footer{
+    margin: $unit-32 auto $unit-32 auto;
+    padding: 0 $unit-96 0 0;
+    box-sizing: border-box;
+    font-weight: 300 !important;
+}
+/*=================================
+NAVIGATION
+=================================*/
+.menu{
+    cursor: pointer;
+    background: $red;
+    display: inline-block;
+    border-radius: 50%;
+    width: $unit-64;
+    height: $unit-64;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+    position: fixed;
+    bottom: $unit-32;
+    right: $unit-32;
+    z-index: 1001;
+    vertical-align: middle;
+}
+.menu--active{
+    background: $white;
+}
+.menu__icon{
+    color: $white;
+    font-size: 18px;
+    line-height: $unit-64;
+    margin: 22.5px 0 0 22.5px;
+}
+.menu__icon--active{
+    color: $red;
+    font-size: 16px;
+    margin: 23.5px 0 0 23.5px;
+    line-height: $unit-64;
+}
+.navigation{
+    background: $red;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: $unit-32 0 0 0;
+}
+.hidden{
+    visibility: hidden;
+}
+.navigation__link, .navigation__social-link, .navigation__chevron{
+    color: #fff;
+}
+.navigation__chevron{
+    font-size: 20px;
+    margin: 0 0 0 16px;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    transform: perspective(0px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.navigation__link-desc{
+    font-size: 17.5px;
+    line-height: 30px;
+    margin: 8px 0 $unit-32 0;
+}
+.navigation__social{
+    position: fixed;
+    bottom: $unit-32;
+    left: $unit-32;
+}
+.navigation__social-link{
+    font-size: 24px;
+    line-height: $unit-64;
+    margin: 0 28px 0 0;
+}
+/*==============================TABLET===============================*/
+@media all and (min-device-width: 600px) and (min-width: 600px) {
+    /*=================================
+    REUSABLE
+    =================================*/
+    .wrapper{
+        width: calc(100% - 128px);
+    }
+    /*=================================
+    MAIN STYLES
+    =================================*/
+    .project{
+        width: calc((100% - 48px) / 2);
+        padding: 0;
+    }
+    .project:nth-child(2n+2){
+        padding: $unit-48 0 0 0;
+    }
+    .project:nth-child(2n+1){
+        padding: 0 0 $unit-48 0;
+    }
+    .social-links{
+        width: calc(100% - 128px);
+        margin: 48px auto 0 auto;
+    }
+    /*=================================
+    FOOTER
+    =================================*/
+    .footer{
+        margin: $unit-32 auto $unit-64 auto;
+    }
+    /*=================================
+    NAVIGATION
+    =================================*/
+    .menu{
+        bottom: $unit-64;
+        right: $unit-64;
+    }
+    .navigation{
+        padding: $unit-48 0 0 0;
+    }
+    .navigation__chevron{
+        font-size: 32px;
+        margin: 0 0 0 16px;
+    }
+    .navigation__link-desc{
+        width: calc((100% - 48px) / 2;
+        max-width: 300px;
+        margin: 16px 0 $unit-48 0;
+    }
+    .navigation__social{
+        bottom: $unit-64;
+        left: $unit-64;
+    }
+    .navigation__social-link{
+        margin: 0 32px 0 0;
+    }
+}
+/*==============================DESKTOP===============================*/
+@media all and (min-device-width: 1025px) and (min-width: 1025px) {
+    /*=================================
+    REUSABLE
+    =================================*/
+    .wrapper{
+        width: calc(100% - 300px);        
+    }
+    /*=================================
+    MAIN STYLES
+    =================================*/
+    .menu{
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    }
+    .menu:hover,.menu:focus,.menu:active{
+        transform: scale(1.1);
+    }
+    .header__content{
+        padding: $unit-64;
+    }
+    .project{
+        width: calc((100% - 64px) / 2);
+        height: auto;
+        position: relative;
+    }
+    .project:nth-child(2n+2){
+        padding: $unit-64 0 0 0;
+    }
+    .project:nth-child(2n+1){
+        padding: 0 0 $unit-64 0;
+    }
+    .project__image-holder{
+        overflow: hidden;
+    }
+    .project__image{
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transform: perspective(1px) translateZ(0);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .project:hover .project__image, .project:focus .project__image, .project:active .project__image{
+        transform: scale(1.05);
+    }
+    .social-links{
+        width: 150px;
+        position: fixed;
+        left: 0;
+        bottom: $unit-64;
+    }
+    .social-links__icon{
+        display: block;
+        margin: 0 0 $unit-64 67px;
+    }
+    .social-links__icon:nth-child(4n+4){
+        margin: 0 0 0 67px;
+    }
+    /*=================================
+    FOOTER
+    =================================*/
+    .footer{
+        margin: $unit-96 auto $unit-64 auto;
+    }
+    /*=================================
+    NAVIGATION
+    =================================*/
+    .menu{
+        bottom: $unit-64;
+        right: 43px;
+    }
+    .navigation{
+        padding: $unit-64 0 0 0;
+    }
+    .navigation__chevron{
+        font-size: 42px;
+        margin: 0 0 0 16px;
+    }
+    .navigation__link-desc{
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 500px;
+        width: 100%;
+    }
+    .navigation__social{
+        left: 150px;
+    }
+    .navigation__link{
+        display: block;
+        width: 60%;
+    }
+    .navigation__link:hover .navigation__chevron, .navigation__link:focus .navigation__chevron, .navigation__link:active .navigation__chevron{
+        transform: translateX(12px);
+    }
+}
+/*============================WIDE DESKTOP============================*/
+@media all and (min-device-width: 1600px) and (min-width: 1600px) {
+    /*=================================
+    MAIN STYLES
+    =================================*/
+    .project{
+        width: calc((100% - 144px) / 3);
+    }
+    .project:nth-child(2n+2){
+        padding: 0;
+    }
+    .project:nth-child(3n+2){
+        padding: 72px 0 0 0;
+    }
+}
