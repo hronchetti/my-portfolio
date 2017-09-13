@@ -84,7 +84,7 @@ MAIN STYLES
 .social-links{
     width: calc(100% - 64px);
     margin: 0 auto;
-    z-index: 999;
+    z-index: 998;
 }
 .social-links__icon{
     margin: 0 32px 0 0;
@@ -101,19 +101,24 @@ FOOTER
 /*=================================
 NAVIGATION
 =================================*/
-.menu{
+.menu, .menu--grow{
     cursor: pointer;
     background: $red;
     display: inline-block;
     border-radius: 50%;
     width: $unit-64;
     height: $unit-64;
-    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
     position: fixed;
     bottom: $unit-32;
     right: $unit-32;
-    z-index: 1001;
     vertical-align: middle;
+}
+.menu{
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+    z-index: 1001;
+}
+.menu--grow{
+    z-index: 999;
 }
 .menu--active{
     background: $white;
@@ -131,7 +136,6 @@ NAVIGATION
     line-height: $unit-64;
 }
 .navigation{
-    background: $red;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -141,7 +145,7 @@ NAVIGATION
     padding: $unit-32 0 0 0;
 }
 .hidden{
-    visibility: hidden;
+    display: none;
 }
 .navigation__link, .navigation__social-link, .navigation__chevron{
     color: #fff;
@@ -205,7 +209,7 @@ NAVIGATION
     /*=================================
     NAVIGATION
     =================================*/
-    .menu{
+    .menu, , .menu--grow{
         bottom: $unit-64;
         right: $unit-64;
     }
@@ -229,6 +233,30 @@ NAVIGATION
         margin: 0 32px 0 0;
     }
 }
+/*===========================LARGE TABLET=============================*/
+@media all and (min-device-width: 920px) and (min-width: 920px) {
+    /*=================================
+    REUSABLE
+    =================================*/
+    .wrapper{
+        width: calc(100% - 192px);        
+    }
+    /*=================================
+    MAIN STYLES
+    =================================*/
+    .header__content{
+        padding: $unit-64 0;
+    }
+    .project{
+        width: calc((100% - 64px) / 2);
+        height: auto;
+        position: relative;
+    }
+    .social-links{
+        width: calc(100% - 192px);
+        margin: 48px auto 0 auto;
+    }
+}
 /*==============================DESKTOP===============================*/
 @media all and (min-device-width: 1025px) and (min-width: 1025px) {
     /*=================================
@@ -241,20 +269,15 @@ NAVIGATION
     MAIN STYLES
     =================================*/
     .menu{
-    transform: translateZ(0);
-    transition-duration: 0.3s;
-    transition-property: transform;
+        transform: translateZ(0);
+        transition-duration: 0.3s;
+        transition-property: transform;
     }
     .menu:hover,.menu:focus,.menu:active{
         transform: scale(1.1);
     }
     .header__content{
         padding: $unit-64;
-    }
-    .project{
-        width: calc((100% - 64px) / 2);
-        height: auto;
-        position: relative;
     }
     .project:nth-child(2n+2){
         padding: $unit-64 0 0 0;
@@ -297,7 +320,7 @@ NAVIGATION
     /*=================================
     NAVIGATION
     =================================*/
-    .menu{
+    .menu, .menu--grow{
         bottom: $unit-64;
         right: 43px;
     }

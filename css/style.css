@@ -38,14 +38,12 @@ table {
   font-family: 'TisaPro-Medium';
   src: url("../fonts/TisaPro-Medium.woff2") format("woff2"), url("../fonts/TisaPro-Medium.woff") format("woff");
   font-style: normal;
-  font-display: swap;
   font-weight: 500; }
 
 @font-face {
   font-family: 'TisaPro-Bold';
   src: url("../fonts/TisaPro-Bold.woff2") format("woff2"), url("../fonts/TisaPro-Bold.woff") format("woff");
   font-style: normal;
-  font-display: swap;
   font-weight: 600; }
 
 body {
@@ -222,7 +220,7 @@ MAIN STYLES
 .social-links {
   width: calc(100% - 64px);
   margin: 0 auto;
-  z-index: 999; }
+  z-index: 998; }
 
 .social-links__icon {
   margin: 0 32px 0 0; }
@@ -240,20 +238,25 @@ FOOTER
 /*=================================
 NAVIGATION
 =================================*/
-.menu {
+.menu, .menu--grow {
   cursor: pointer;
   background: #E3474B;
   display: inline-block;
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
   bottom: 32px;
   right: 32px;
-  z-index: 1001;
   vertical-align: middle; }
+
+.menu {
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1001; }
+
+.menu--grow {
+  z-index: 999; }
 
 .menu--active {
   background: #fff; }
@@ -271,7 +274,6 @@ NAVIGATION
   line-height: 64px; }
 
 .navigation {
-  background: #E3474B;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -281,7 +283,7 @@ NAVIGATION
   padding: 32px 0 0 0; }
 
 .hidden {
-  visibility: hidden; }
+  display: none; }
 
 .navigation__link, .navigation__social-link, .navigation__chevron {
   color: #fff; }
@@ -346,7 +348,7 @@ NAVIGATION
   /*=================================
     NAVIGATION
     =================================*/
-  .menu {
+  .menu, .menu--grow {
     bottom: 64px;
     right: 64px; }
   .navigation {
@@ -452,7 +454,7 @@ NAVIGATION
   /*=================================
     NAVIGATION
     =================================*/
-  .menu {
+  .menu, .menu--grow {
     bottom: 64px;
     right: 43px; }
   .navigation {
