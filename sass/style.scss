@@ -71,7 +71,7 @@ MAIN STYLES
 }
 .project{
     width: 100%;
-    padding: 0 0 $unit-48 0;
+    margin: 0 0 $unit-48 0;
 }
 .project__title{
     margin: 24px 0 14px 0;
@@ -188,13 +188,13 @@ NAVIGATION
     =================================*/
     .project{
         width: calc((100% - 48px) / 2);
-        padding: 0;
+        margin: 0;
     }
     .project:nth-child(2n+2){
-        padding: $unit-48 0 0 0;
+        margin: $unit-48 0 0 0;
     }
     .project:nth-child(2n+1){
-        padding: 0 0 $unit-48 0;
+        margin: 0 0 $unit-48 0;
     }
     .social-links{
         width: calc(100% - 128px);
@@ -280,10 +280,10 @@ NAVIGATION
         padding: $unit-64;
     }
     .project:nth-child(2n+2){
-        padding: $unit-64 0 0 0;
+        margin: $unit-64 0 0 0;
     }
     .project:nth-child(2n+1){
-        padding: 0 0 $unit-64 0;
+        margin: 0 0 $unit-64 0;
     }
     .project__image-holder{
         overflow: hidden;
@@ -357,9 +357,9 @@ NAVIGATION
         width: calc((100% - 144px) / 3);
     }
     .project:nth-child(2n+2){
-        padding: 0;
+        margin: 0;
     }
     .project:nth-child(3n+2){
-        padding: 72px 0 0 0;
+        margin: 72px 0 0 0;
     }
 }

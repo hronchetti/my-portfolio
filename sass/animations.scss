@@ -85,3 +85,8 @@
 .menu--grow{
     animation: superScale 1s forwards;
 }
+@media all and (min-device-width: 1600px) and (min-width: 1600px) {
+    .menu--grow{
+        animation: superScale 0.5s forwards;
+    }
+}
