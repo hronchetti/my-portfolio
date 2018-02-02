@@ -79,7 +79,7 @@ body {
 
 h1, h5 {
   font: 600 32px/48px 'Museo-Slab-700', serif;
-  letter-spacing: 0; }
+  letter-spacing: 1.5px; }
 
 h1 {
   color: #3d466e; }
@@ -94,7 +94,7 @@ h3 {
   color: #3d466e; }
 
 h4 {
-  font: 500 17.5px/32.5px 'Museo-Slab-700', serif;
+  font: 500 17.5px/32.5px 'Museo-Slab-900', serif;
   color: #3d466e; }
 
 h5 {
@@ -102,7 +102,7 @@ h5 {
 
 .small-text {
   font: 300 12.25px/16px 'Museo-Sans-300', sans-serif;
-  color: #828DBA; }
+  color: #8F98BA; }
 
 .bold {
   font-family: 'Museo-Sans-700'; }
@@ -123,7 +123,7 @@ h5 {
   h3 {
     font: 300 20px/34px 'Museo-Sans-500', sans-serif; }
   h4 {
-    font: 500 20px/34px 'Museo-Slab-700', serif; }
+    font: 500 20px/34px 'Museo-Slab-900', serif; }
   .small-text {
     font: 300 14px/24px 'Museo-Sans-300', sans-serif; } }
 
@@ -520,28 +520,39 @@ NAVIGATION
 .button {
   border: 2px solid #34CA9A;
   color: #34CA9A;
-  letter-spacing: 0;
-  line-height: 19px;
-  padding: 14px 26px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: inline-block;
-  margin: 32px 0 0 0;
   vertical-align: middle;
-  position: relative;
   -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
-  -webkit-transition-property: color;
-  -o-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-box-shadow: 0 0 1px transparent;
+          box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  margin: 32px 0 0 0;
+  line-height: 19px;
+  padding: 14px 26px;
+  letter-spacing: 0;
   border-radius: 32px; }
 
 .button:hover, .button:focus, .button:active {
-  color: #fff;
-  background-color: #34CA9A; }
+  -webkit-animation-name: hvr-back-pulse;
+          animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #34CA9A;
+  background-color: #34CA9A;
+  color: #fff; }
 
 .gallery {
   display: -webkit-box;
@@ -572,6 +583,9 @@ NAVIGATION
 .gallery__image:nth-child(even) {
   padding: 48px 0 0 0; }
 
+.header__body-text, .project-details__body-text {
+  text-indent: 48px; }
+
 .gallery__wide-image {
   height: 100%; }
 
@@ -581,7 +595,7 @@ NAVIGATION
 
 .callout h3 {
   font-family: 'Museo-Sans-300';
-  color: #828DBA; }
+  color: #8F98BA; }
 
 .callout__source {
   margin: 16px 0 0 0; }

@@ -20,22 +20,28 @@ $green: #34CA9A;
 .button{
     border: 2px solid $green;
     color: $green;
-    letter-spacing: 0;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+    margin: $unit-32 0 0 0;
     line-height: 19px;
     padding: 14px 26px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: $unit-32 0 0 0;
-    vertical-align: middle;
-    position: relative;
-    transform: perspective(1px) translateZ(0);
-    transition-property: color;
-    transition-duration: 0.3s;
+    letter-spacing: 0;
     border-radius: $unit-32;
 }
 .button:hover, .button:focus, .button:active{
+    animation-name: hvr-back-pulse;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: #34CA9A;
+    background-color: #34CA9A;
     color: $white;
-    background-color: $green;
 }
 .gallery{
     display: flex;
@@ -56,6 +62,9 @@ $green: #34CA9A;
 .gallery__image:nth-child(even){
     padding: $unit-48 0 0 0;
 }
+.header__body-text, .project-details__body-text{
+    text-indent: $unit-48;
+}
 .gallery__wide-image{
     height: 100%;
 }
@@ -65,7 +74,7 @@ $green: #34CA9A;
 }
 .callout h3{
     font-family: 'Museo-Sans-300';
-    color: #828DBA;
+    color: #8F98BA;
 }
 .callout__source{
     margin: $unit-16 0 0 0;

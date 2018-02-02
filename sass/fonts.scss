@@ -37,7 +37,7 @@
 }
 // COLOURS
 $white: #fff;
-$light-indigo: #828DBA;
+$light-indigo: #8F98BA;
 $dark-indigo: #3d466e;
 
 // STYLING
@@ -50,7 +50,7 @@ body{
 }
 h1, h5{
     font: 600 32px/48px 'Museo-Slab-700', serif;
-    letter-spacing: 0;
+    letter-spacing: 1.5px;
 }
 h1{
     color: $dark-indigo;
@@ -65,7 +65,7 @@ h3{
     color: $dark-indigo;
 }
 h4{
-    font: 500 17.5px/32.5px 'Museo-Slab-700', serif;
+    font: 500 17.5px/32.5px 'Museo-Slab-900', serif;
     color: $dark-indigo;
 }
 h5{
@@ -101,7 +101,7 @@ h5{
         font: 300 20px/34px 'Museo-Sans-500', sans-serif;
     }
     h4{
-        font: 500 20px/34px 'Museo-Slab-700', serif;
+        font: 500 20px/34px 'Museo-Slab-900', serif;
     }
     .small-text{
         font: 300 14px/24px 'Museo-Sans-300', sans-serif;

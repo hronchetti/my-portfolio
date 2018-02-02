@@ -49,6 +49,11 @@
         transform: scale(1);
     }
 }
+@keyframes hvr-back-pulse {
+    50% {
+        background-color: rgba(52, 202, 154, 0.75);
+    }
+}
 // ELEMENTS ANIMATED
 .overlay{
     width: 100%;
@@ -63,7 +68,7 @@
 .loader{
     width: 32px;
     height: 32px;
-    border: 3px solid #E3474B;
+    border: 3px solid #34CA9A;
     border-top: 3px solid #fff;
     border-radius: 50%;
     position: fixed;
