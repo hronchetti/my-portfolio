@@ -574,7 +574,7 @@ NAVIGATION
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 0 32px 0; }
+  padding: 0 0 48px 0; }
 
 .gallery__image {
   width: 100%;
@@ -664,7 +664,7 @@ NAVIGATION
   .gallery {
     padding: 64px 0; }
   .gallery--shorter {
-    padding: 0 0 48px 0; }
+    padding: 0 0 64px 0; }
   .gallery__image {
     width: calc((100% - 48px) / 2); }
   .gallery__image:nth-child(even) {
