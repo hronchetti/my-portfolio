@@ -21,8 +21,8 @@ $unit-96: 96px;
 
 //COLOURS
 $white: #fff;
-$dark-gray: #333;
-$red: #E3474B;
+$dark-indigo: #3d466e;
+$green: #34CA9A;
 
 /*=================================
 GLOBAL
@@ -41,8 +41,8 @@ a{
     user-select: none;
 }
 ::selection{
-    color: $dark-gray;
-    background: #FFE900;
+    color: $white;
+    background: #3e54ff;
 }
 /*=================================
 REUSABLE
@@ -52,7 +52,7 @@ REUSABLE
     margin: 0 auto;
 }
 .red{
-    color: $red;
+    color: $green;
 }
 .stop-scrolling {
     height: 100%;
@@ -79,7 +79,7 @@ MAIN STYLES
 .project__tagline{
     line-height: 24px;
     margin: 0 0 14px 0;
-    color: $dark-gray;
+    color: $dark-indigo;
 }
 .social-links{
     width: calc(100% - 64px);
@@ -103,7 +103,7 @@ NAVIGATION
 =================================*/
 .menu, .menu--grow{
     cursor: pointer;
-    background: $red;
+    background: $green;
     display: inline-block;
     border-radius: 50%;
     width: $unit-64;
@@ -130,7 +130,7 @@ NAVIGATION
     margin: 22.5px 0 0 22.5px;
 }
 .menu__icon--active{
-    color: $red;
+    color: $green;
     font-size: 16px;
     margin: 23.5px 0 0 23.5px;
     line-height: $unit-64;

@@ -1,86 +1,109 @@
 // FONT DECLARATION
-@font-face{
-    font-family: 'TisaPro-Medium';
-    src: url('../fonts/TisaPro-Medium.woff2') format('woff2'), url('../fonts/TisaPro-Medium.woff') format('woff');
+@font-face {
+    font-family: 'Museo-Slab-900';
+    src: url('../fonts/MuseoSlab-900.woff2') format('woff2'), url('../fonts/MuseoSlab-900.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 500;
 }
-@font-face{
-    font-family: 'TisaPro-Bold';
-    src: url('../fonts/TisaPro-Bold.woff2') format('woff2'), url('../fonts/TisaPro-Bold.woff') format('woff');
+@font-face {
+    font-family: 'Museo-Slab-700';
+    src: url('../fonts/MuseoSlab-700.woff2') format('woff2'), url('../fonts/MuseoSlab-700.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 600;
 }
-
+@font-face {
+    font-family: 'Museo-Slab-500';
+    src: url('../fonts/MuseoSlab-500.woff2') format('woff2'), url('../fonts/MuseoSlab-500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo-Sans-700';
+    src: url('../fonts/MuseoSans-700.woff2') format('woff2'), url('../fonts/MuseoSans-700.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo-Sans-500';
+    src: url('../fonts/MuseoSans-500.woff2') format('woff2'), url('../fonts/MuseoSans-500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo-Sans-300';
+    src: url('../fonts/MuseoSans-300.woff2') format('woff2'), url('../fonts/MuseoSans-300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
 // COLOURS
 $white: #fff;
-$light-gray: #999;
-$dark-gray: #333;
+$light-indigo: #828DBA;
+$dark-indigo: #3d466e;
 
 // STYLING
 body{
-    font: 300 14px/28px 'Roboto', sans-serif;
-    color: $dark-gray;
+    font: 300 14px/28px 'Museo-Sans-300', sans-serif;
+    color: $dark-indigo;
     letter-spacing: 1px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 h1, h5{
-    font: 600 32px/48px 'TisaPro-Bold', serif;
+    font: 600 32px/48px 'Museo-Slab-700', serif;
     letter-spacing: 0;
 }
 h1{
-    color: $dark-gray;
+    color: $dark-indigo;
 }
 h2{
-    font: 500 20px/34px 'TisaPro-Medium', serif;
-    color: $dark-gray;
+    font: 500 20px/34px 'Museo-Slab-900', serif;
+    color: $dark-indigo;
     margin: 0 0 16px 0;
 }
 h3{
-    font: 300 17.5px/30px 'Roboto', sans-serif;
-    color: $dark-gray;
+    font: 300 17.5px/30px 'Museo-Sans-500', sans-serif;
+    color: $dark-indigo;
 }
 h4{
-    font: 500 17.5px/32.5px 'TisaPro-Medium', serif;
-    color: $dark-gray;
+    font: 500 17.5px/32.5px 'Museo-Slab-700', serif;
+    color: $dark-indigo;
 }
 h5{
     color: $white;
 }
 .small-text{
-    font: 300 12.25px/16px 'Roboto', sans-serif;
-    color: $light-gray;
+    font: 300 12.25px/16px 'Museo-Sans-300', sans-serif;
+    color: $light-indigo;
 }
 .bold{
-    font-weight: 500;
+    font-family: 'Museo-Sans-700';
 }
 /*==============================TABLET===============================*/
 @media all and (min-device-width: 600px) and (min-width: 600px) {
 
     h1, h5{
-        font: 600 48px/73px 'TisaPro-Bold', serif;
+        font: 600 48px/73px 'Museo-Slab-700', serif;
     }
 }
 /*===========================LARGE TABLET=============================*/
 @media all and (min-device-width: 920px) and (min-width: 920px) {
 
     body{
-        font: 300 16px/30px 'Roboto', sans-serif;
+        font: 300 16px/30px 'Museo-Sans-300', sans-serif;
     }
     h1, h5{
-        font: 600 64px/97px 'TisaPro-Bold', serif;
+        font: 600 64px/92px 'Museo-Slab-700', serif;
     }
     h2{
-        font: 500 32px/48px 'TisaPro-Medium', serif;
+        font: 500 32px/48px 'Museo-Slab-900', serif;
     }
     h3{
-        font: 300 20px/34px 'Roboto', sans-serif;
+        font: 300 20px/34px 'Museo-Sans-500', sans-serif;
     }
     h4{
-        font: 500 20px/34px 'TisaPro-Medium', serif;
+        font: 500 20px/34px 'Museo-Slab-700', serif;
     }
     .small-text{
-        font: 300 14px/24px 'Roboto', sans-serif;
+        font: 300 14px/24px 'Museo-Sans-300', sans-serif;
     }
 }

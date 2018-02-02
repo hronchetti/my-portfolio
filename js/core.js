@@ -26,14 +26,14 @@ $(menu).click(function(){
 /*=================================
 ON DOCUMENT READY
 =================================*/
-$(document).ready(function(){
+window.onload = function(){
     // Fadeout loading spinner and overlay
     setTimeout(showPage, 500);
     // Build page animation effect
     setTimeout(function(){
         $('.animate-bottom').css('display','block');
     }, 500);
-});
+};
 /*=================================
 LOADING SPINNER
 =================================*/
