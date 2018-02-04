@@ -50,7 +50,7 @@ body{
 }
 h1, h5{
     font: 600 32px/48px 'Museo-Slab-700', serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 h1{
     color: $dark-indigo;
@@ -93,6 +93,7 @@ h5{
     }
     h1, h5{
         font: 600 64px/92px 'Museo-Slab-700', serif;
+        letter-spacing: 1.5px;
     }
     h2{
         font: 500 32px/48px 'Museo-Slab-900', serif;
